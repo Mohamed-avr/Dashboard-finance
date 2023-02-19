@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
      <Layout>
-      hello ther
+    
        </Layout>
     </>
   )

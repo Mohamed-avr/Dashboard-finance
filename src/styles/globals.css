@@ -104,4 +104,10 @@ a {
 /* --- tailwind css links  --- */ 
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; 
+
+/*  native styling  */
+
+.nav {
+color: #fff;
+}
