@@ -21,6 +21,9 @@ module.exports = {
       'body-secound':'#282C35',
       
     }
+    , fontFamily:{ 
+      'poppins':['poppins']
+    }
   },
   plugins: [],
 }
