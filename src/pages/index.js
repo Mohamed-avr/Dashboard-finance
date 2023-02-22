@@ -1,30 +1,30 @@
-import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
+// import { Inter } from '@next/font/google'
 import Layout from 'Components/Layout'
-import { useState , useEffect } from 'react'
+import {  useEffect, useContext, use } from 'react';
+import AppContext from 'Components/AppContext';
 
-const inter = Inter({ subsets: ['latin'] })
+// const inter = Inter({ subsets: ['latin'] })
+
 
 export default function Home() {
+  const { sizeScreen, setSizeScreen } = useContext(AppContext)
 
-
-   const [resposnive , setResponsive] = useState(false);
-
-
+// hamdling the size event 
   useEffect(() => {
-    if(window.innerWidth > 600) {
-      setResponsive(true) 
+    if (window.screen.width <= 600) {
+      setSizeScreen(true)
     } else {
-      setResponsive(false)
+      setSizeScreen(false);
     }
-   console.log(resposnive)
-  }, [setResponsive]);
-     
+  }, [sizeScreen]);
+
+
+// index page   
   return (
     <>
-     <Layout>
+      <Layout>
     
-       </Layout>
+      </Layout>
     </>
   )
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './Navbar';
+import AsideBar from './AsideBar';
 
 const Layout = (  { children }) => {
 
@@ -9,6 +10,7 @@ const Layout = (  { children }) => {
         <div>
             {/* header  */}
             <Navbar/>
+            <AsideBar/>
             {children}
           
 

@@ -1,23 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
-import {  useState , useEffect } from 'react';
+import {  useState , useEffect  , useContext} from 'react';
+import AppContext from 'Components/AppContext';
 
-
+// an icon 
 const turnAnIcon = () => {
-
-    const [resposnive , setResponsive] = useState(false);
-
-
-    useEffect(() => {
-      if(window.innerWidth > 600) {
-        setResponsive(true) 
-      } else {
-        setResponsive(false)
-      }
-     console.log(resposnive)
-    });
-
-
     return (
         <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M10.169 17.2069C8.22895 17.2069 6.2889 16.8989 4.44877 16.2827C3.74935 16.0412 3.21647 15.55 2.98333 14.9088C2.74186 14.2677 2.82513 13.56 3.20814 12.9272L4.16567 11.3368C4.36551 11.0038 4.54869 10.3377 4.54869 9.94632V7.53999C4.54869 4.44257 7.07158 1.91968 10.169 1.91968C13.2664 1.91968 15.7893 4.44257 15.7893 7.53999V9.94632C15.7893 10.3293 15.9725 11.0038 16.1723 11.3451L17.1215 12.9272C17.4796 13.5267 17.5462 14.2511 17.3047 14.9088C17.0632 15.5666 16.5387 16.0662 15.8809 16.2827C14.0491 16.8989 12.109 17.2069 10.169 17.2069ZM10.169 3.16864C7.76267 3.16864 5.79765 5.12534 5.79765 7.53999V9.94632C5.79765 10.5541 5.54785 11.4534 5.23978 11.978L4.28224 13.5683C4.09906 13.8764 4.0491 14.2011 4.15735 14.4759C4.25726 14.759 4.50706 14.9755 4.84844 15.092C8.32887 16.2577 12.0175 16.2577 15.4979 15.092C15.7976 14.9921 16.0308 14.7673 16.139 14.4675C16.2473 14.1678 16.2223 13.8431 16.0558 13.5683L15.0982 11.978C14.7818 11.4367 14.5404 10.5458 14.5404 9.93799V7.53999C14.5404 5.12534 12.5837 3.16864 10.169 3.16864Z" fill="#9E9E9E"/>
@@ -28,9 +15,25 @@ const turnAnIcon = () => {
     )
 }
 
+
+
+    
+let  widthWind = 1400 ; 
+let  newWidth =  1400 - 128 ; 
+
+
 const Navbar = () => {
+    
+
+
+ let tailwindStyle = `w-[${newWidth}px]`;
+ 
+
+ console.log( typeof tailwindStyle , tailwindStyle )
+
+    const { sizeScreen } = useContext(AppContext)
     return (
-        <nav className=' bg-navbar  py-2  text-white text-lightColor '>
+        <nav className=' bg-navbar  py-2  text-white text-lightColor  fixed top-0 left-[10rem] tailwindStyle   '>
             <div className=' flex justify-between px-4 '>
                 <div>
                     <h2 className='text-2xl font-medium'>
@@ -44,7 +47,7 @@ const Navbar = () => {
                       {turnAnIcon()}
                       </div>
                     <form method='get' className='flex'>
-                        {resposnive ?  
+                        { !sizeScreen ?  
                            <input className=' bg-[transparent] hover:text-[#fff] bg-body-secound text-sm px-2 py-2 outline-none rounded-lg'  type='text' id='inputText' placeholder='search...' /> 
                           :
                            <div className='hover:bg-body-secound rounded-lg p-[7px] cursor-pointer'>
