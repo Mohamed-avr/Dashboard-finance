@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import {  useState , useEffect  , useContext} from 'react';
+import {  useState , useEffect  , useContext , useRef } from 'react';
 import AppContext from 'Components/AppContext';
 
 // an icon 
@@ -17,25 +17,14 @@ const turnAnIcon = () => {
 
 
 
-    
-let  widthWind = 1400 ; 
-let  newWidth =  1400 - 128 ; 
-
 
 const Navbar = () => {
-    
 
-
- let tailwindStyle = `w-[${newWidth}px]`;
- 
-
- console.log( typeof tailwindStyle , tailwindStyle )
-
-    const { sizeScreen } = useContext(AppContext)
+    const { sizeScreen } = useContext(AppContext);
     return (
-        <nav className=' bg-navbar  py-2  text-white text-lightColor  fixed top-0 left-[10rem] tailwindStyle   '>
+        <nav className=' bg-navbar  py-2  text-white text-lightColor  fixed top-0 0 w-full  '>
             <div className=' flex justify-between px-4 '>
-                <div>
+                <div className=''>
                     <h2 className='text-2xl font-medium'>
                         Dashboard 
                     </h2>
@@ -47,15 +36,15 @@ const Navbar = () => {
                       {turnAnIcon()}
                       </div>
                     <form method='get' className='flex'>
-                        { !sizeScreen ?  
-                           <input className=' bg-[transparent] hover:text-[#fff] bg-body-secound text-sm px-2 py-2 outline-none rounded-lg'  type='text' id='inputText' placeholder='search...' /> 
-                          :
-                           <div className='hover:bg-body-secound rounded-lg p-[7px] cursor-pointer'>
+                          
+                           <input className=' hidden sm:flex bg-[transparent] hover:text-[#fff] bg-body-secound text-sm px-2 py-2 outline-none rounded-lg'  type='text' id='inputText' placeholder='search...' /> 
+                         
+                           <div className='sm:hidden  hover:bg-body-secound rounded-lg p-[7px] cursor-pointer'>
+                              <input   className=' hidden bg-[transparent] hover:text-[#fff] bg-body-secound text-sm px-2 py-2 outline-none rounded-lg'  type='text' id='inputText' placeholder='search...' /> 
                               <Image src={'/search.svg'}  width={22} height={22} alt={'profileImage'} />
                            </div>
-                        }
-                        {/* <Image src={'/search.svg'}  width={22} height={22} alt={'profileImage'} />  */}
-                      
+                       
+                     
                     </form>
 
                     <div> 

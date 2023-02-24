@@ -19,7 +19,7 @@ export default function Home() {
   }, [sizeScreen]);
 
 
-// index page   
+// index page     
   return (
     <>
       <Layout>
