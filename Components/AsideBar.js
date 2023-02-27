@@ -6,14 +6,14 @@ import AppContext from "./AppContext";
 
 
 const AsideBar = () => {
-  const { dashboard ,setDashboard , transactions , setTransactions  , walet , setWalet , analyitic , setAnalytic , personal , setPersonal} = useContext(AppContext);
+  const { dashboard ,setDashboard , transactions , setTransactions  , walet , setWalet , analytic , setAnalytic , personal , setPersonal} = useContext(AppContext);
 
 
 
 
   const handlerDash = (e) => {
 
-      console.log(dashboard  , transactions , walet , analyitic , personal )
+      console.log(dashboard  , transactions , walet , analytic , personal )
     //  change the state of the dashboard to true 
      { dashboard ? setDashboard(false) : setDashboard(true)  }
 
@@ -24,67 +24,96 @@ const AsideBar = () => {
      setPersonal(false);
 
     //
-     if(dashboard) {  
-
-      if(dashboard == true) {
-        e.target.classList.add('bg-selectedColor/10');
-        e.target.parentElement.lastChild.lastChild.classList.remove('hidden');
-      }
-     else if (dashboard == false) {
-     e.target.classList.remove('bg-selectedColor/10');
-     e.target.parentElement.lastChild.lastChild.classList.add('hidden');
-     }
-     
-   }}
+}
 
    
 
   const handlerTrans = (e) => {
-    console.log(dashboard  , transactions , walet , analyitic , personal )
+    console.log(dashboard  , transactions , walet , analytic , personal )
   //  change the state of the dashboard to true 
    { transactions ? setTransactions(false) : setTransactions(true)  }
    // change other states 
-   setDashboard(false);
+     setDashboard(false);
      setWalet(false);
      setAnalytic(false);
      setPersonal(false);
-  //
-   if(!transactions) {  
-    e.target.classList.add('bg-selectedColor/10');
-   e.target.parentElement.lastChild.lastChild.classList.remove('hidden');
-   } else {
-    e.target.classList.remove('bg-selectedColor/10');
-    e.target.parentElement.lastChild.lastChild.classList.add('hidden');
-   }
+
  }
+
+   const handlerWalet = (e) => {
+    console.log(dashboard  , transactions , walet , analytic , personal )
+  //  change the state of the dashboard to true 
+   { walet ? setWalet(false) : setWalet(true)  }
+   // change other states 
+     setDashboard(false);
+     setTransactions(false);
+     setAnalytic(false);
+     setPersonal(false);
+
+ }
+ const handlerAnalytics = (e) => {
+  console.log(dashboard  , transactions , walet , analytic , personal )
+//  change the state of the dashboard to true 
+ { analytic ? setAnalytic(false) : setAnalytic(true)  }
+ // change other states 
+   setDashboard(false);
+   setTransactions(false);
+   setWalet(false);
+   setPersonal(false);
+
+}
  
 const links = {
   dashboard : {
     Name : 'dashboard', 
-    icon : '/Icon/presention-chart.svg',
+    icon : '/Icon/element-3.svg',
   } ,
   transactions : {
     Name : 'transactions', 
-    icon : '/Icon/presention-chart.svg',
+    icon : '/Icon/trans.svg',
+  } ,
+  walet : {
+    Name : 'walet', 
+    icon : '/Icon/wallet-2.svg',
+  } ,
+  analytic : {
+    Name : 'Analytics', 
+    icon : '/Icon/Analytics.svg',
   } ,
 }
     return (
-       <aside className='fixed left-0 top-[52px] bg-sidebar w-[10rem] h-full '>
-        <ul className="mt-10 text-selectedColor space-y-2 ">
+       <aside className='fixed left-0 top-[52px] bg-sidebar sm:w-[10rem] w-[3rem] h-full '>
+        <ul className="mt-10 text-[#A9A9A9] space-y-2 ">
            
           {/*  dash */}
-           <li id="dashoard"  onClick={handlerDash} className=" bg-selectedColor/10 cursor-pointer w-[10rem] mt-2 py-3 pl-4 hover: text-[12px]  text-left relative flex items-center">
+            <li id="dashoard"  onClick={handlerDash}  className={`${ dashboard ?'bg-selectedColor/10 cursor-pointer text-selectedColor w-full sm:w-[10rem] mt-2 py-3 pl-4 hover: text-[12px]  text-left relative flex items-center' : 'cursor-pointer w-[10rem] mt-2 py-3 pl-4 hover: text-[12px]  text-left relative flex items-center'}`}>
                 <Image className="selectedColor " src={links.dashboard.icon} width={'15'} height={'15'} alt={''} />
-                <a className="ml-2" href="/"> {links.dashboard.Name}</a>
-               <span className=" absolute w-1 h-2  bg-[#ff0] right-0 "></span> 
-            </li>
+                <h4 className="ml-2 sm:flex hidden"> {links.dashboard.Name}</h4>
+               { dashboard  ?   <span className=" absolute w-[5px] h-4 rounded-l  bg-[#FFC01E] right-0 "></span> : ''}
+            </li> 
+        
 
             {/* transactions */}
-            <li id="handlerTrans"  onClick={handlerTrans} className=" bg-selectedColor/10 cursor-pointer w-[10rem] mt-2 py-3 pl-4 hover: text-[12px]  text-left relative flex items-center">
+            <li id="handlerTrans"  onClick={handlerTrans} className={`${ transactions ?'bg-selectedColor/10 cursor-pointer text-selectedColor w-full sm:w-[10rem] mt-2 py-3 pl-4 hover: text-[12px]  text-left relative flex items-center' : 'cursor-pointer w-[10rem] mt-2 py-3 pl-4 hover: text-[12px]  text-left relative flex items-center'}`}>
                 <Image className="selectedColor " src={links.transactions.icon} width={'15'} height={'15'} alt={''} />
-                <a className="ml-2" href="/"> {links.transactions.Name}</a>
-                <span className=" absolute w-1 h-2  bg-[#ff0] right-0 "></span>
+                <h4 className="ml-2 sm:flex hidden"> {links.transactions.Name}</h4>
+                { transactions ?   <span className=" absolute w-[5px] h-4 rounded-l  bg-[#FFC01E] right-0 "></span> : ''}
             </li>
+
+             {/* walet */}
+            <li id="handlerWalet"  onClick={handlerWalet} className={`${ walet ?'bg-selectedColor/10 cursor-pointer text-selectedColor w-full sm:w-[10rem] mt-2 py-3 pl-4 hover: text-[12px]  text-left relative flex items-center' : 'cursor-pointer w-[10rem] mt-2 py-3 pl-4 hover: text-[12px]  text-left relative flex items-center'}`}>
+                <Image className="selectedColor " src={links.walet.icon} width={'15'} height={'15'} alt={''} />
+                <h4 className="ml-2 sm:flex hidden"> {links.walet.Name}</h4>
+                { walet ?   <span className=" absolute w-[5px] h-4 rounded-l bg-[#FFC01E] right-0 "></span> : ''}
+            </li>
+
+            <li id="Analytics"  onClick={handlerAnalytics} className={`${ analytic ?'bg-selectedColor/10 cursor-pointer text-selectedColor w-full sm:w-[10rem] mt-2 py-3 pl-4 hover: text-[12px]  text-left relative flex items-center' : 'cursor-pointer w-[10rem] mt-2 py-3 pl-4 hover: text-[12px]  text-left relative flex items-center'}`}>
+                <Image className="selectedColor " src={links.analytic.icon} width={'15'} height={'15'} alt={''} />
+                <h4 className="ml-2 sm:flex hidden"> {links.analytic.Name}</h4>
+                { analytic ?   <span className=" absolute w-[5px] h-4 rounded-l bg-[#FFC01E] right-0 "></span> : ''}
+            </li>
+
+
         </ul>
 
        </aside>
