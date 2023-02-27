@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { useState, useEffect, useContext, useRef } from 'react';
 import AppContext from 'Components/AppContext';
+import css from 'styled-jsx/css';
 
 // an icon 
 

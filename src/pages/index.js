@@ -10,22 +10,8 @@ import css from 'styled-jsx/css';
 
 export default function Home() {
 
-  const { dashboard ,setDashboard , transactions , setTransactions , walet , setWalet , analytic , setAnalyitic , personal , setPersonal} = useContext(AppContext);
-  // const { transactions ,setTransactions} = useContext(AppContext);
-  // const {  walet , setWalet} = useContext(AppContext);
-  // const { analyitic ,setAnalyitic} = useContext(AppContext); // personal
-  // const { personal ,setPersonal} = useContext(AppContext);
-
-// index page   
-
-// const defaultContent  = () => {
-//   if ( dashboard , transactions , walet , analyitic , personal == false) {
-//     return(dashboard);
-//   }  else {
-//     return(dashboard);
-//   }
-// }
-
+  const { dashboard ,setDashboard , transactions , setTransactions , walet , setWalet , analytic , setAnalytic , personal , setPersonal , message , setMessage , setting , setSetting} = useContext(AppContext);
+  const defaultContent = dashboard == false & transactions == false & walet ==false  &  analytic == false & personal == false & message == false &  setting == false ; 
 
   return (
     <>
@@ -37,8 +23,10 @@ export default function Home() {
         {  walet ? <div className='text-selectedColor m-[10rem]  text-3xl'> walet content </div>:  ' '}
         {  analytic ? <div className='text-selectedColor m-[10rem]  text-3xl '>  analyitic content </div>:  ' '}
         {  personal ? <div className='text-selectedColor m-[10rem]  text-3xl '>  personal content </div>:  ' '}
+        {  message ? <div className='text-selectedColor m-[10rem]  text-3xl '>  message content </div>:  ' '}
+        {  setting ? <div className='text-selectedColor m-[10rem]  text-3xl '>  setting content </div>:  ' '}
         
-      
+        {  defaultContent ?  setDashboard(true) : ''}
        
         </main>
       </Layout>
