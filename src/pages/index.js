@@ -3,6 +3,13 @@ import Layout from 'Components/Layout'
 import {  useEffect, useContext, use } from 'react';
 import AppContext from 'Components/AppContext';
 import css from 'styled-jsx/css';
+import Dashboard from 'Components/content/Dashboard';
+import Transactions from 'Components/content/Transactions';
+import Walet from 'Components/content/Walet';
+import Analytics from 'Components/content/Analytics';
+import Personal from 'Components/content/Personal';
+import Message from 'Components/content/Message';
+import Setting from 'Components/content/Setting';
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -16,15 +23,15 @@ export default function Home() {
   return (
     <>
       <Layout>
-        <main className='sm:pt-[6rem] pl-[48px] pt-[54px] sm:pl-[10rem] bg-body h-screen'> 
+        <main className='sm:pt-[3rem] pl-[48px] pt-[54px] sm:pl-[10rem] bg-body h-screen '> 
 
-        {  dashboard ? <div className='  text-selectedColor m-[10rem]  text-3xl '>  dashboard content </div>:  ' '}
-        {  transactions ? <div className='text-selectedColor m-[10rem]  text-3xl '>  Trans content </div>:  ' '}
-        {  walet ? <div className='text-selectedColor m-[10rem]  text-3xl'> walet content </div>:  ' '}
-        {  analytic ? <div className='text-selectedColor m-[10rem]  text-3xl '>  analyitic content </div>:  ' '}
-        {  personal ? <div className='text-selectedColor m-[10rem]  text-3xl '>  personal content </div>:  ' '}
-        {  message ? <div className='text-selectedColor m-[10rem]  text-3xl '>  message content </div>:  ' '}
-        {  setting ? <div className='text-selectedColor m-[10rem]  text-3xl '>  setting content </div>:  ' '}
+        {  dashboard ? <Dashboard/> :  ' '}
+        {  transactions ? <Transactions/> :  ' '}
+        {  walet ? <Walet/> :  ' '}
+        {  analytic ? <Analytics/> :  ' '}
+        {  personal ? <Personal/>:  ' '}
+        {  message ? <Message/> :  ' '}
+        {  setting ?<Setting/>:  ' '}
         
         {  defaultContent ?  setDashboard(true) : ''}
        

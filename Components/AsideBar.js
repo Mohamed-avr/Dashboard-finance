@@ -117,7 +117,7 @@ const handlerSetting = (e) => {
 const links = {
   dashboard : {
     Name : 'dashboard', 
-    icon : '/Icon/element-3.svg',
+    icon : '/Icon/Dashboard.svg',
   } ,
   transactions : {
     Name : 'transactions', 

@@ -12,12 +12,14 @@ import css from 'styled-jsx/css';
 const Navbar = () => {
 
     const { sizeScreen } = useContext(AppContext);
+
+
     return (
         <nav className=' bg-navbar  py-2  text-white text-lightColor  fixed top-0 0 w-full  '>
             <div className=' flex justify-between px-4 '>
                 <div className='flex justify-center  items-center '>
                     <div className=''>
-                        <Image src={'/Icon/logo.svg'} alt={'logo'} width={24} height={24} />
+                        <Image src={'/Icon/Logo.svg'} alt={'logo'} width={80} height={80} />
                     </div>
                     <h2 className='sm:flex hidden text-xl font-medium ml-20'>
                         Dashboard
