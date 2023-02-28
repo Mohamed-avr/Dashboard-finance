@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }) {
  const  MoneyStateData = [
     {
    'title' : 'balance' , 
-   'icon': '/Icon/BalanceG.svg', 
+   'icon': '/Icon/Balance.svg', 
    'money' : 44.88 ,
    } , 
    {
