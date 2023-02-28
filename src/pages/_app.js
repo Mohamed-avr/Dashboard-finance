@@ -14,12 +14,56 @@ export default function App({ Component, pageProps }) {
   const [ setting , setSetting ] = useState(false);
 
 
+ const  MoneyStateData = [
+    {
+   'title' : 'balance' , 
+   'icon': '/Icon/notifications.svg', 
+   'money' : 44.44 ,
+   } , 
+   {
+    'title' : 'income' , 
+    'icon': '/Icon/', 
+    'money' : 44.44 ,
+    }, 
+    {
+      'title' : 'expenses' , 
+      'icon': '/Icon/', 
+      'money' : 44.44 ,
+      },
+    {
+      'title' : 'savings' , 
+      'icon': '/Icon/', 
+      'money' : 44.44 ,
+      }, 
+  ]
+
 
 
   return (
-    <AppContext.Provider value={{dashboard,setDashboard , transactions , setTransactions, walet , setWalet , analytic ,setAnalytic , personal , setPersonal , message , setMessage , setting , setSetting}} >
+    <AppContext.Provider value={{ MoneyStateData , dashboard,setDashboard , transactions , setTransactions, walet , setWalet , analytic ,setAnalytic , personal , setPersonal , message , setMessage , setting , setSetting}} >
       <Component {...pageProps} />
 
     </AppContext.Provider>
   )
 }
+/* 
+
+, 
+     {
+    'title' : 'income' , 
+    'icon': '/Icon/', 
+    'money' : 44.44 ,
+    }, 
+     {
+      'title' : 'savings' , 
+      'icon': '/Icon/', 
+      'money' : 44.44 ,
+      }, 
+   {
+        'title' : 'savings' , 
+        'icon': '/Icon/', 
+        'money' : 44.44 ,
+        }
+
+
+        */

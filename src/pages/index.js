@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <>
       <Layout>
-        <main className='sm:pt-[3rem] pl-[48px] pt-[54px] sm:pl-[10rem] bg-body h-screen '> 
+        <main className='sm:pt-[3rem] pt-[54px] pl-[48px]  sm:pl-[10rem] bg-body h-screen '> 
 
         {  dashboard ? <Dashboard/> :  ' '}
         {  transactions ? <Transactions/> :  ' '}

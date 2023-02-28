@@ -112,3 +112,6 @@ a {
 
 /*  native styling  */
 
+.bold-text {
+   font-weight: 500;
+}
