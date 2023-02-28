@@ -7,7 +7,7 @@ const MoneyState = (prop) => {
 
     return (
         <div>
-              <div className='w-[14rem] h-[6rem] bg-sidebar  rounded-lg  m-2 flex items-center  '>
+              <div className=' sm:w-[14rem] w-[18rem] h-[6rem] bg-sidebar  rounded-lg  m-2 flex items-center  '>
                   <div className=" w-[40%] flex justify-center ">
                       <div className=" bg-body-secound p-2 rounded-lg ">
                       <Image src={prop.sendIcon} alt={''} width={24} height={24}  />

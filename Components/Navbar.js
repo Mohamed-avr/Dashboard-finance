@@ -34,7 +34,7 @@ const Navbar = () => {
                     </div>
                     <form method='get' className='flex'>
 
-                        <input className=' hidden sm:flex bg-[transparent] hover:text-[#fff] bg-body-secound text-sm px-2 py-2 outline-none rounded-lg' type='text' id='inputText' placeholder='search...' />
+                        <input className=' hidden sm:flex bg-[transparent] hover:text-[#fff] bg-body text-sm px-2 py-2 outline-none rounded-lg' type='text' id='inputText' placeholder='search...' />
 
                         <div className='sm:hidden  hover:bg-body-secound rounded-lg p-[7px] cursor-pointer'>
                             <input className=' hidden bg-[transparent] hover:text-[#fff] bg-body-secound text-sm px-2 py-2 outline-none rounded-lg' type='text' id='inputText' placeholder='search...' />
