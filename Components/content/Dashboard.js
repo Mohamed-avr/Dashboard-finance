@@ -7,7 +7,6 @@ import AppContext from 'Components/AppContext';
 const Dashboard = () => {
     const { MoneyStateData} = useContext(AppContext);
 
-
     console.log(MoneyStateData)
     return (
         <section className='sm:m-10 flex   '>

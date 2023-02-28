@@ -17,23 +17,23 @@ export default function App({ Component, pageProps }) {
  const  MoneyStateData = [
     {
    'title' : 'balance' , 
-   'icon': '/Icon/notifications.svg', 
-   'money' : 44.44 ,
+   'icon': '/Icon/BalanceG.svg', 
+   'money' : 44.88 ,
    } , 
    {
     'title' : 'income' , 
-    'icon': '/Icon/', 
-    'money' : 44.44 ,
+    'icon': '/Icon/incume.svg', 
+    'money' : 21.32 ,
     }, 
     {
       'title' : 'expenses' , 
-      'icon': '/Icon/', 
-      'money' : 44.44 ,
+      'icon': '/Icon/expenses.svg', 
+      'money' : 23.21 ,
       },
     {
       'title' : 'savings' , 
-      'icon': '/Icon/', 
-      'money' : 44.44 ,
+      'icon': '/Icon/saving.svg', 
+      'money' : 63.21 ,
       }, 
   ]
 
@@ -46,24 +46,3 @@ export default function App({ Component, pageProps }) {
     </AppContext.Provider>
   )
 }
-/* 
-
-, 
-     {
-    'title' : 'income' , 
-    'icon': '/Icon/', 
-    'money' : 44.44 ,
-    }, 
-     {
-      'title' : 'savings' , 
-      'icon': '/Icon/', 
-      'money' : 44.44 ,
-      }, 
-   {
-        'title' : 'savings' , 
-        'icon': '/Icon/', 
-        'money' : 44.44 ,
-        }
-
-
-        */
