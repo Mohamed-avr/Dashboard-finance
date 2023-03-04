@@ -5,7 +5,7 @@ import AppContext from 'Components/AppContext';
 const MoneyState = (prop) => {
 
     return (
-        <div>
+        <>
               <div className=' sm:w-[14rem] w-[18rem] h-[6rem] hover:shadow-xl active:border-selectedColor hover:active:border-2 transition-all cursor-pointer bg-sidebar  rounded-lg  m-2 flex items-center  '>
                   <div className=" w-[40%] flex justify-center ">
                       <div className=" bg-body-secound p-2 rounded-lg ">
@@ -17,7 +17,7 @@ const MoneyState = (prop) => {
                         <h2 className="text-[#fff] bold-text text-xl mt-1 "> ${prop.sendMoney}</h2>
                   </div>
               </div>
-        </div>
+        </>
     );
 }
 
