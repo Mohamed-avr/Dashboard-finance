@@ -22,7 +22,7 @@ const Navbar = () => {
                         <Image src={'/Icon/Logo.svg'} alt={'logo'} width={80} height={80} />
                     </div>
                     <h2 className='sm:flex hidden text-xl font-medium ml-20'>
-                        Dashboard
+                        Dashboard new
                     </h2>
                 </div>
 
