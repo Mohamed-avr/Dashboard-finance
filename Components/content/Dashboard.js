@@ -20,8 +20,9 @@ const Dashboard = () => {
             </div>
 
             <section className='flex sm:flex-row items-center  justify-center sm:items-start   flex-col sm:space-x-4 mt-4 w-full '>
-                <div className=' sm:pl-2 sm:space-y-4 space-y-0 pl-0 justify-center bg-selectedColor '>
-                    <article className='sm:w-[38rem] w-[288px] h-[20rem] bg-sidebar rounded-lg '>
+                <div className=' sm:pl-2 flex flex-wrap space-y-4  pl-0 justify-center '>
+
+                    <article className='sm:w-[38rem] w-[19rem] h-[20rem] bg-sidebar rounded-lg '>
                         <div className='flex justify-between items-center text-lightColor px-5 py-3 '>
                             <div className='capitalize text-[#fff]  sm:text-xl text-xs'> overview </div>
                             <div className='flex space-x-4 items-center  '> 
@@ -37,11 +38,11 @@ const Dashboard = () => {
                     </article>
 
 
-                    <div className='flex justify-start sm:items-center sm:flex-row flex-col  sm:space-x-4  sm:space-y-0 space-y-4  '>
+                    <div className='flex justify-start sm:items-center sm:flex-row flex-col  sm:space-x-2  sm:space-y-0 space-y-4  '>
                         <article className='w-[19rem] h-40 bg-sidebar rounded-lg  '>
                             chart   lines
                         </article>
-                        <article className='w-[18rem] h-40 bg-sidebar rounded-lg  '>
+                        <article className='w-[19rem] h-40 bg-sidebar rounded-lg  '>
                             chart
                         </article>
 

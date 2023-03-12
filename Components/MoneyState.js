@@ -6,7 +6,7 @@ const MoneyState = (prop) => {
 
     return (
         <>
-              <div className=' sm:w-[14rem] w-[18rem] h-[6rem] hover:shadow-xl active:border-selectedColor hover:active:border-2 transition-all cursor-pointer bg-sidebar  rounded-lg  m-2 flex items-center  '>
+              <div className=' sm:w-[14rem] w-[19rem] h-[6rem] hover:shadow-xl active:border-selectedColor hover:active:border-2 transition-all cursor-pointer bg-sidebar  rounded-lg  m-2 flex items-center  '>
                   <div className=" w-[40%] flex justify-center ">
                       <div className=" bg-body-secound p-2 rounded-lg ">
                       <Image src={prop.sendIcon} alt={''} width={24} height={24}  />
