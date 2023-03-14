@@ -15,8 +15,6 @@ const Dashboard = () => {
                 {MoneyStateData.map((e, i) => {
                     return (<MoneyState key={i} sendTitle={e.title} sendIcon={e.icon} sendMoney={e.money} />)
                 })}
-
-
             </div>
 
             <section className='flex sm:flex-row items-center  justify-center sm:items-start   flex-col sm:space-x-4 mt-4 w-full '>
