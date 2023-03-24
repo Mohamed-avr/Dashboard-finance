@@ -276,3 +276,278 @@
     transform: rotate(0deg);
   }
 }
+
+
+/* ---------------- chart style ----------------- */
+.groupChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 8.33px;
+  background-color: #1a1c22;
+  width: 613.65px;
+  height: 297.25px;
+}
+.text {
+  position: relative;
+  line-height: 13.32px;
+}
+.income,
+.months {
+  position: absolute;
+}
+.months {
+  top: 268.94px;
+  left: 51.62px;
+  width: 545.38px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 28.31px;
+}
+.income {
+  top: 0;
+  left: 16.65px;
+}
+.tip,
+.tip1,
+.tipChild {
+  position: absolute;
+  top: 3.33px;
+  left: 0;
+  width: 8.33px;
+  height: 8.33px;
+}
+.tip,
+.tip1 {
+  top: 21.65px;
+  left: 364.7px;
+  width: 54.65px;
+  height: 15px;
+  color: #9a9a9a;
+}
+.tip1 {
+  left: 432.14px;
+  width: 62.65px;
+}
+.amount1,
+.amount2,
+.amount3,
+.amount4,
+.amount5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 28.31px;
+}
+.amount2,
+.amount3,
+.amount4,
+.amount5 {
+  top: 48.29px;
+}
+.amount3,
+.amount4,
+.amount5 {
+  top: 96.59px;
+}
+.amount4,
+.amount5 {
+  top: 144.88px;
+}
+.amount5 {
+  top: 193.17px;
+  width: 18.32px;
+}
+.amount,
+.heading {
+  position: absolute;
+  left: 15.82px;
+}
+.amount {
+  top: 56.62px;
+  width: 28.31px;
+  height: 208.17px;
+}
+.heading {
+  top: 17.49px;
+  font-size: 14.99px;
+  font-weight: 500;
+  color: #fff;
+}
+.dateChild,
+.linesIcon {
+  position: absolute;
+  top: 63.28px;
+  left: 51.62px;
+  width: 545.38px;
+  height: 194px;
+}
+.dateChild {
+  cursor: pointer;
+  border: 0.8px solid #383838;
+  padding: 0;
+  background-color: transparent;
+  top: 0;
+  left: 0;
+  border-radius: 6.66px;
+  box-sizing: border-box;
+  width: 78.27px;
+  height: 26.64px;
+}
+.iconarrowSquareDown {
+  position: absolute;
+  height: 62.5%;
+  width: 21.28%;
+  top: 18.75%;
+  right: 5.32%;
+  bottom: 18.75%;
+  left: 73.4%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.date,
+.monthly {
+  position: absolute;
+}
+.monthly {
+  top: 5.83px;
+  left: 10.82px;
+  font-size: 9.99px;
+  font-family: Poppins;
+  color: #9a9a9a;
+  text-align: left;
+}
+.date {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  top: 16.65px;
+  left: 520.4px;
+  width: 78.27px;
+  height: 26.64px;
+}
+.groupInner,
+.groupItem,
+.tooltipsChild {
+  position: absolute;
+  top: 86.18px;
+  left: 51.62px;
+  width: 539.13px;
+  height: 154.87px;
+}
+.groupInner,
+.tooltipsChild {
+  top: 114.9px;
+  width: 539.55px;
+  height: 114.07px;
+}
+.tooltipsChild {
+  top: -0.42px;
+  left: 42.05px;
+  border-right: 0.8px dashed #1fcb4f;
+  box-sizing: border-box;
+  width: 0.83px;
+  height: 194.84px;
+}
+.tooltipButtonIcon {
+  position: absolute;
+  top: 109.91px;
+  left: 35.8px;
+  width: 13.32px;
+  height: 13.32px;
+}
+.unionChild {
+  border: 0.8px solid #3a6ff8;
+  background-color: #3a6ff8;
+  position: absolute;
+  top: 112.41px;
+  left: 299.75px;
+  border-radius: 8.33px;
+  box-sizing: border-box;
+}
+.union,
+.unionChild,
+.unionWrapper {
+  width: 84.93px;
+  height: 51.62px;
+}
+.union {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: #1fcb4f;
+  position: relative;
+}
+.unionWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 3.3305554389953613px 3.3305554389953613px 16.65px
+    rgba(0, 0, 0, 0.12);
+}
+.value,
+.value1 {
+  position: absolute;
+  font-family: Poppins;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  height: 14.15px;
+}
+.value {
+  top: 27.48px;
+  left: 0;
+  font-size: 14.99px;
+  font-weight: 500;
+  text-align: center;
+  justify-content: center;
+  width: 84.93px;
+}
+.value1 {
+  top: 9.16px;
+  left: 14.15px;
+  font-size: 9.99px;
+  text-align: left;
+  width: 70.77px;
+  opacity: 0.6;
+}
+.tooltip {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 49.13px;
+  left: 0;
+  width: 84.93px;
+  height: 51.62px;
+}
+.rectangleParent,
+.tooltips {
+  position: absolute;
+  top: 63.28px;
+  left: 299.75px;
+  width: 84.93px;
+  height: 194px;
+}
+.rectangleParent {
+  top: 0;
+  left: 0;
+  width: 613.65px;
+  height: 297.25px;
+}
+.overview {
+  position: relative;
+  width: 100%;
+  height: 297.25px;
+  text-align: left;
+  font-size: 9.99px;
+  color: #a9a9a9;
+  font-family: Poppins;
+}
