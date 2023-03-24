@@ -38,7 +38,6 @@ export default function App({ Component, pageProps }) {
   ]
 
 
-
   return (
     <AppContext.Provider value={{ MoneyStateData , dashboard,setDashboard , transactions , setTransactions, walet , setWalet , analytic ,setAnalytic , personal , setPersonal , message , setMessage , setting , setSetting}} >
       <Component {...pageProps} />

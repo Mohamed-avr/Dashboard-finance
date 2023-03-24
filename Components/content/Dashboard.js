@@ -7,14 +7,8 @@ import Payment from './Payment';
 
 const Dashboard = () => {
     const { MoneyStateData } = useContext(AppContext);
-    console.log(MoneyStateData)
-
-     const handlingPayment = ( component , items , progress , line) => {
-        for (let i = 0 ; i < items , i++ ) {
-            return ( <Payment /> )
-        }      
-     }
-
+   
+    
 
     return (
         <section className='sm:m-10   '>
@@ -39,7 +33,11 @@ const Dashboard = () => {
                                     <option value={'monthly'}>daily </option>
                                 </select>
                             </div>
+                            
                         </div>
+                        <div className=' bg-selectedColor '> 
+                                hello
+                            </div>
                     </article>
 
 
@@ -47,10 +45,9 @@ const Dashboard = () => {
                         <article className='w-[19rem] h-40 bg-sidebar rounded-lg  '>
                             chart   lines
                         </article>
-                        <article className='w-[19rem] h-auto bg-sidebar rounded-lg py-4 '>
-                             <h2  className='ml-4 font-medium text-white'> Payment </h2>
-
-                             
+                        <article className='w-[19rem] h-auto bg-sidebar rounded-lg py-4 pb-5 '>
+                             <h2  className='ml-4 font-medium text-white text-lightColor'> Payment </h2>  
+                                                           {/*  js code - that appears the payments content */}
                             <Payment/>
                             <Payment/>
                             <Payment/>

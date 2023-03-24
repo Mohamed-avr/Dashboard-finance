@@ -9,8 +9,8 @@ const Payment = () => {
             </div>
             <div className="flex flex-col w-[15rem] pl-2 -mt-2">
                 <div className="  flex justify-between px-2 my-1">
-                     <h4 className=" text-sm "> account </h4> 
-                     <h5 className=" text-sm  " > 4011/4400</h5>
+                     <h4 className=" text-sm text-lightColor "> Account </h4> 
+                     <h5 className=" text-xs text-lightColor/50 "> 4011<span className=" text-lightColor " >/4400</span></h5>
                      </div>
                 <div>
                      <div className="w-[14rem] bg-body h-2 rounded-md overflow-hidden absolute ">
