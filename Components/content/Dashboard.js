@@ -5,13 +5,13 @@ import Payment from './Payment';
 import ChartElement from 'public/chartElement';
 import Chart from './Chart';
 
-// ChartElement
 
 
 const Dashboard = () => {
+
+    // import data 
     const { MoneyStateData } = useContext(AppContext);
-
-
+    const { payment } = useContext(AppContext);
 
 
     return (
@@ -25,9 +25,11 @@ const Dashboard = () => {
 
             <section className='flex sm:flex-row items-center  justify-center sm:items-start flex-col sm:space-x-4 mt-4 w-full'>
                 <div className=' sm:pl-2 flex flex-wrap space-y-4  pl-0 sm:justify-start justify-center '>
-                    <article className='sm:w-[38rem] w-[19rem] h-[20rem] bg-sidebar rounded-lg '>
+                    {/* Chart Graph */}
+                    <article className=' sm:w-[38rem] w-[19rem] sm:h-[20rem] h-[22rem] bg-sidebar rounded-lg  flex flex-col'>
                         <div className='flex justify-between items-center text-lightColor px-5 py-3 '>
-                            <div className='capitalize text-[#fff]  sm:text-xl text-xs'> overview </div>
+                            <div className='capitalize text-[#fff]  sm:text-xl '> overview </div>
+
                             <div className='flex space-x-4 items-center  '>
                                 <div className='text-sm sm:flex items-center hidden'> <div className='w-[10px] h-[10px] rounded-full bg-selectedColor mr-1'> </div> incume </div>
                                 <div className='text-sm sm:flex items-center hidden '> <div className='w-[10px] h-[10px] rounded-full bg-[#FFC01E]  mr-1'> </div> expenses </div>
@@ -37,25 +39,28 @@ const Dashboard = () => {
                                     <option value={'monthly'}>daily </option>
                                 </select>
                             </div>
-
                         </div>
-                        <div className='   h-[30rem] '>
-                            <Chart/>
+                        <div className=' z-0  h-[30rem] '>
+                            <Chart />
+                        </div>
+                        <div className='flex space-x-4 items-center text-lightColor  mt-7 my-10 ml-32 sm:hidden '>
+                            <div className='text-sm flex items-center '> <div className='w-[10px] h-[10px] rounded-full bg-selectedColor mr-1'> </div> incume </div>
+                            <div className='text-sm flex items-center '> <div className='w-[10px] h-[10px] rounded-full bg-[#FFC01E]  mr-1'> </div> expenses </div>
                         </div>
                     </article>
 
 
                     <div className='flex justify-start sm:items-start sm:flex-row flex-col  sm:space-x-2  sm:space-y-0 space-y-4  '>
-                        <article className='w-[19rem] h-40 bg-sidebar rounded-lg  '>
-                            chart   lines
+                        {/* Chart coloumns */}
+                        <article className='w-[19rem] h-40 bg-sidebar rounded-lg  text-selectedColor py-10 '>
+                            chart  lines
                         </article>
+                        {/* Chart lines */}
                         <article className='w-[19rem] h-auto bg-sidebar rounded-lg py-4 pb-5 '>
-                            <h2 className='ml-4 font-medium text-white text-lightColor'> Payment </h2>
-                            {/*  js code - that appears the payments content */}
-                            <Payment />
-                            <Payment />
-                            <Payment />
-                            <Payment />
+                            <h2 className='ml-4 font-medium text-white text-[#fff] '> Payment </h2>
+                            {payment.map(e => {
+                                return (<Payment key={e.id} sendIcon={e.icon} sendTitle={e.title} sendProgress={e.progress} />)
+                            })}
                         </article>
 
                     </div>

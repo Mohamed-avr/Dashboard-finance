@@ -1,7 +1,7 @@
 
 
 ## Finance Dashboard
-Finance dashboard for sending and receiving money 
+Finance dashboard for sending and receiving money - From UI design to next js code 
 
 ### UI Design from [figma community](https://www.figma.com/file/B0Ze01ZuIUsBlEO5IkTaB6/Finance-Dashboard-UI-(Community)?node-id=0%3A1&t=Z0RRtw9Lv3tBDaDi-1)
  

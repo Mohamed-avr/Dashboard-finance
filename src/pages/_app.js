@@ -37,9 +37,61 @@ export default function App({ Component, pageProps }) {
       }, 
   ]
 
+  const payment = [
+    { 
+      'title':'Account', 
+      'id':1,
+      'progress':{ 
+        'goalNumber': '$10,000' ,
+        'progressNumber': '$3,421' ,
+
+      } , 
+      'icon':'/iconsPayment/Account.svg', 
+
+    } ,
+    { 
+      'title':'Software', 
+      'id': 2 ,
+      'progress':{ 
+        'goalNumber': '$250' ,
+        'progressNumber':  '$241' ,
+
+      } , 
+      'icon':'/iconsPayment/Software.svg', 
+    } ,
+    { 
+      'title':'Rent house', 
+      'id': 3 ,
+      'progress':{ 
+        'goalNumber': '$52,000' ,
+        'progressNumber':  '$1,541' ,
+
+      } , 
+      'icon':'/iconsPayment/RentHouse.svg', 
+    } ,
+    { 
+      'title':'Food', 
+      'id': 4 ,
+      'progress':{ 
+        'goalNumber': '$1000' ,
+        'progressNumber':  '$141' ,
+      } , 
+      'icon':'/iconsPayment/Food.svg', 
+    } ,
+
+  ]
 
   return (
-    <AppContext.Provider value={{ MoneyStateData , dashboard,setDashboard , transactions , setTransactions, walet , setWalet , analytic ,setAnalytic , personal , setPersonal , message , setMessage , setting , setSetting}} >
+    <AppContext.Provider value={
+      { MoneyStateData 
+        , dashboard,setDashboard
+        , transactions , setTransactions
+        , walet , setWalet 
+        , analytic ,setAnalytic 
+        , personal , setPersonal 
+        , message , setMessage 
+        , setting , setSetting 
+        , payment}} >
       <Component {...pageProps} />
 
     </AppContext.Provider>

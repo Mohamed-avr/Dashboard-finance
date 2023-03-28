@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Chart = () => {
     return (
-        <div className='flex justify-between mt-5  w-full flex-row px-4'>
+        <div className='flex justify-between mt-5  w-full flex-row px-4 z-10  '>
             <div className="space-y-8 text-xs -mt-2 text-lightColor ">
                 <h5> $2000 </h5>
                 <h5> $1500 </h5>

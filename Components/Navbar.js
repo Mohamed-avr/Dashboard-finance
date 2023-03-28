@@ -5,17 +5,13 @@ import AppContext from 'Components/AppContext';
 import css from 'styled-jsx/css';
 
 // an icon 
-
-
-
-
 const Navbar = () => {
 
     const { sizeScreen } = useContext(AppContext);
 
 
     return (
-        <nav className=' bg-navbar  py-2  text-white text-lightColor  fixed top-0 0 w-full  '>
+        <nav className=' bg-navbar  py-2  text-white text-lightColor  fixed top-0 0 w-full z-10  '>
             <div className=' flex justify-between px-4 '>
                 <div className='flex justify-center  items-center '>
                     <div className=''>
