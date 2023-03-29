@@ -36,8 +36,6 @@ const Navbar = () => {
                             <input className=' hidden bg-[transparent] hover:text-[#fff] bg-body-secound text-sm px-2 py-2 outline-none rounded-lg' type='text' id='inputText' placeholder='search...' />
                             <Image src={'/search.svg'} width={22} height={22} alt={'profileImage'} />
                         </div>
-
-
                     </form>
 
                     <div>

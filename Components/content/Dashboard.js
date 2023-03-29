@@ -4,6 +4,7 @@ import AppContext from 'Components/AppContext';
 import Payment from './Payment';
 import ChartElement from 'public/chartElement';
 import Chart from './Chart';
+import Image from 'next/image';
 
 
 
@@ -15,7 +16,7 @@ const Dashboard = () => {
 
 
     return (
-        <section className='sm:m-10   '>
+        <section className='sm:m-10  sm:w-[1400px]  '>
 
             <div className=' flex sm:justify-start justify-center  items-center  flex-wrap  mt-8 sm:mt-0 '>
                 {MoneyStateData.map((e, i) => {
@@ -23,7 +24,7 @@ const Dashboard = () => {
                 })}
             </div>
 
-            <section className='flex sm:flex-row items-center  justify-center sm:items-start flex-col sm:space-x-4 mt-4 w-full'>
+            <section className='flex sm:flex-row items-center  sm:ml-[120px]  justify-center  sm:items-start flex-col sm:space-x-4 sm:space-y-0 space-y-4  mt-4 sm:w-2/4 w-full '>
                 <div className=' sm:pl-2 flex flex-wrap space-y-4  pl-0 sm:justify-start justify-center '>
                     {/* Chart Graph */}
                     <article className=' sm:w-[38rem] w-[19rem] sm:h-[20rem] h-[22rem] bg-sidebar rounded-lg  flex flex-col'>
@@ -65,10 +66,35 @@ const Dashboard = () => {
 
                     </div>
                 </div>
-                <div className='  bg-[#f0f] '>
-                    <article className=' w-[22rem]  h-[10rem]' >
+                <div className='w-[19rem] h-auto '>
+                    <div className=' flex flex-col justify-center items-center pb-4 bg-navbar w-[19rem]  rounded-lg  '>
+                        <div className='flex justify-between w-full px-3 my-3'>
+                            <div className='capitalize text-[#fff]  sm:text-xl '> credit card </div>
+                            <button className=' bg-body-secound px-2 py rounded-lg flex justify-start items-center text-selectedColor transition-all  hover:bg-selectedColor hover:text-[#fff] '>+</button>
+                        </div>
+                        <article className=' overflow-hidden relative rounded-lg text-[#fff]  bg-body-secound w-[17rem] h-[12rem] mt-4  '>
+                           
+                                 <div className='p-3'>
+                                    <h4 className=' uppercase text-lg '> LOGO</h4> 
+                                 </div>
 
-                    </article>
+                                 <div className='mt-2 p-3'>
+                                    <h4 className=' uppercase text-base'> 3475 7381 3759 ****</h4>
+                                 </div>
+
+                                 <div className=' absolute flex justify-between  items-center px-3   left-0 bottom-0  w-full h-[4.5rem] bg-lightColor/20 '>
+                                 <div>
+                                    <h6 className=' uppercase  text-[12px] text-lightColor/40 '>Total balance</h6>
+                                    <h4 className='text-base'>3,215,352 USD</h4>
+                                 </div>
+                                 <div className='text-right' >
+                                 <h6 className=' uppercase  text-[12px] text-lightColor/40 '>EXP . date</h6>
+                                    <h4 className='text-base'>04/24</h4>
+                                 </div>
+                                 </div>
+                                
+                        </article>
+                    </div>
                 </div>
             </section>
 
