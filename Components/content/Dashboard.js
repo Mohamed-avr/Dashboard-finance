@@ -3,16 +3,17 @@ import { useContext } from 'react';
 import AppContext from 'Components/AppContext';
 import Payment from './Payment';
 import ChartElement from 'public/chartElement';
-import Chart from './Chart';
+import Chart from 'Components/Chart';
 import Image from 'next/image';
+import MoneyTransaction from 'Components/MoneyTransaction';
 
 
 
 const Dashboard = () => {
 
     // import data 
-    const { MoneyStateData } = useContext(AppContext);
-    const { payment } = useContext(AppContext);
+    const { MoneyStateData , payment , avatars } = useContext(AppContext);
+    // const { payment } = useContext(AppContext);
 
 
     return (
@@ -66,7 +67,7 @@ const Dashboard = () => {
 
                     </div>
                 </div>
-                <div className='w-[19rem] h-auto '>
+                <div className='w-[19rem] h-auto flex flex-col space-y-3 '>
                     <div className=' flex flex-col justify-center items-center pb-4 bg-navbar w-[19rem]  rounded-lg  '>
                         <div className='flex justify-between w-full px-3 my-3'>
                             <div className='capitalize text-[#fff]  sm:text-xl '> credit card </div>
@@ -95,6 +96,20 @@ const Dashboard = () => {
                                 
                         </article>
                     </div>
+
+                    <div className=' flex flex-col justify-center items-center pb-4 bg-navbar w-[19rem]  rounded-lg  '>
+                        <div className='flex justify-between w-full px-3 my-3'>
+                            <div className='capitalize text-[#fff]  sm:text-xl '> recent transactions </div>
+                            <button className=' text-xs py rounded-lg flex justify-start items-center text-selectedColor transition-all hover:text-selectedColor/75 '>see  all</button>
+                        </div>
+                        <article className=' overflow-hidden relative rounded-lg text-[#fff]   w-[17rem]  mt-2  '>
+                           {avatars.map((e) => {
+                            return( <MoneyTransaction key={e.id} sendName={e.name} sendTypeTransaction={e.typeTransaction} sendValue={e.value} sendAvatar={e.avatar} /> )
+                           })}        
+                        </article>
+                    </div>
+
+
                 </div>
             </section>
 
