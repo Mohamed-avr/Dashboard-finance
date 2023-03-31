@@ -104,7 +104,7 @@ const Dashboard = () => {
                         </div>
                         <article className=' overflow-hidden relative rounded-lg text-[#fff]   w-[17rem]  mt-2  '>
                            {avatars.map((e) => {
-                            return( <MoneyTransaction key={e.id} sendName={e.name} sendTypeTransaction={e.typeTransaction} sendValue={e.value} sendAvatar={e.avatar} /> )
+                            return( <MoneyTransaction key={e.id} sendId={e.id} sendName={e.name} sendTypeTransaction={e.typeTransaction} sendValue={e.value} sendAvatar={e.avatar} /> )
                            })}        
                         </article>
                     </div>
