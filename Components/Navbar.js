@@ -11,14 +11,14 @@ const Navbar = () => {
 
 
     return (
-        <nav className=' bg-navbar  py-2  text-white text-lightColor  fixed top-0 0 w-full z-10  '>
+        <nav className=' bg-navbar  py-2  text-white text-[#fff]  fixed top-0 0 w-full z-10  '>
             <div className=' flex justify-between px-4 '>
                 <div className='flex justify-center  items-center '>
                     <div className=''>
                         <Image src={'/Icon/Logo.svg'} alt={'logo'} width={80} height={80} />
                     </div>
-                    <h2 className='sm:flex hidden text-xl font-medium ml-20'>
-                        Dashboard new
+                    <h2 className='sm:flex hidden text-xl font-medium ml-20 '>
+                        Dashboard 
                     </h2>
                 </div>
 
