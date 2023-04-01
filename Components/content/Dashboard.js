@@ -6,6 +6,7 @@ import ChartElement from 'public/chartElement';
 import Chart from 'Components/Chart';
 import Image from 'next/image';
 import MoneyTransaction from 'Components/MoneyTransaction';
+import Coloumns from 'Components/Coloumns';
 
 
 
@@ -33,8 +34,8 @@ const Dashboard = () => {
                             <div className='capitalize text-[#fff]  sm:text-xl '> overview </div>
 
                             <div className='flex space-x-4 items-center  '>
-                                <div className='text-sm sm:flex items-center hidden'> <div className='w-[10px] h-[10px] rounded-full bg-selectedColor mr-1'> </div> incume </div>
-                                <div className='text-sm sm:flex items-center hidden '> <div className='w-[10px] h-[10px] rounded-full bg-[#FFC01E]  mr-1'> </div> expenses </div>
+                                <div className='text-xs sm:flex items-center hidden'> <div className='w-[10px] h-[10px] rounded-full bg-selectedColor mr-1'> </div> incume </div>
+                                <div className='text-xs sm:flex items-center hidden '> <div className='w-[10px] h-[10px] rounded-full bg-[#FFC01E]  mr-1'> </div> expenses </div>
                                 <select className=' bg-transparent hover:border-selectedColor hover:shadow-selectedColor/40   rounded-lg py-2 px-1 bg-[#fff]/0 border outline-none text-sm cursor-pointer text-lightColor'>
                                     <option className='bg-[#fff]/0 text-selectedColor ' value={'monthly'}>monthly</option>
                                     <option value={'monthly'}>weekly </option>
@@ -46,17 +47,32 @@ const Dashboard = () => {
                             <Chart />
                         </div>
                         <div className='flex space-x-4 items-center text-lightColor  mt-7 my-10 ml-32 sm:hidden '>
-                            <div className='text-sm flex items-center '> <div className='w-[10px] h-[10px] rounded-full bg-selectedColor mr-1'> </div> incume </div>
-                            <div className='text-sm flex items-center '> <div className='w-[10px] h-[10px] rounded-full bg-[#FFC01E]  mr-1'> </div> expenses </div>
+                            <div className='text-xs flex items-center '> <div className='w-[10px] h-[10px] rounded-full bg-selectedColor mr-1'> </div> incume </div>
+                            <div className='text-xs flex items-center '> <div className='w-[10px] h-[10px] rounded-full bg-[#FFC01E]  mr-1'> </div> expenses </div>
                         </div>
                     </article>
 
 
                     <div className='flex justify-start sm:items-start sm:flex-row flex-col  sm:space-x-2  sm:space-y-0 space-y-4  '>
+
                         {/* Chart coloumns */}
-                        <article className='w-[19rem] h-40 bg-sidebar rounded-lg  text-selectedColor py-10 '>
-                            chart  lines
+                        <article className='w-[19rem] pb-4 bg-sidebar rounded-lg  text-selectedColor  flex-col flex '>
+                        <div className=' justify-between items-center text-lightColor px-5 py-3  flex   '>
+                            <div className='capitalize text-[#fff]  sm:text-xl '> activity </div>
+
+                            <div className='flex space-x-4  items-center   '>
+                                <div className='text-xs sm:flex items-center hidden '> <div className='w-[10px] h-[10px] rounded-full bg-selectedColor mr-1'> </div> incume </div>
+                                <div className='text-xs sm:flex items-center hidden '> <div className='w-[10px] h-[10px] rounded-full bg-[#FFC01E]  mr-1'> </div> expenses </div>
+                            </div>
+                        </div>
+
+                        <div className=' z-0   overflow-hidden '>
+                        <Coloumns />
+                        </div>
+
                         </article>
+
+
                         {/* Chart lines */}
                         <article className='w-[19rem] h-auto bg-sidebar rounded-lg py-4 pb-5 '>
                             <h2 className='ml-4 font-medium text-white text-[#fff] '> Payment </h2>
@@ -108,6 +124,7 @@ const Dashboard = () => {
                            })}        
                         </article>
                     </div>
+
 
 
                 </div>
