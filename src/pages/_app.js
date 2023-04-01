@@ -89,28 +89,28 @@ export default function App({ Component, pageProps }) {
       "typeTransaction": "received" ,
       "id": 1,
       "value": "+$54.08",
-      "avatar": "Avatars/photo1.png"
+      "avatar": "photo1.png"
     }
     ,  {
       "name": "Floyd Miles",
       " typeTransaction": "send",
       "id": 2,
       "value": "-$39.65",
-      "avatar": "Avatars/photo2.png"
+      "avatar": "photo2.png"
     }
     ,  {
       "name": "Jerome Bell",
       " typeTransaction": "send" ,
       "id": 3,
       "value": "-$29.78",
-      "avatar": "Avatars/photo3.png"
+      "avatar": "photo3.png"
     }
     ,  {
       "name": "Ralph Edwards",
       " typeTransaction": "send" ,
       "id": 4,
       "value": "-$46.61",
-      "avatar": "Avatars/photo4.png"
+      "avatar": "photo4.png"
     }
   ]
 
