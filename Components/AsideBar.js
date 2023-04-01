@@ -146,11 +146,11 @@ const links = {
 }
     return (
        <aside className='fixed left-0 top-[52px] bg-sidebar sm:w-[10rem] w-[3rem] h-full '>
-        <ul className="mt-10 text-[#A9A9A9] space-y-2 ">
+        <ul className="mt-10 text-[#A9A9A9] space-y-3 ">
            
           {/*  dash */}
             <li id="dashoard"  onClick={handlerDash}  className={`${ dashboard ?'bg-selectedColor/10 cursor-pointer text-selectedColor w-full sm:w-[10rem] mt-2 py-3 pl-4 hover: text-[12px]  text-left relative flex items-center' : 'cursor-pointer w-[10rem] mt-2 py-3 pl-4 hover: text-[12px]  text-left relative flex items-center'}`}>
-                <Image className="selectedColor " src={links.dashboard.icon} width={'15'} height={'15'} alt={''} />
+                <Image className="selectedColor " src={links.dashboard.icon} width={'18'} height={'18'} alt={''} />
                 <h4 className="ml-2 sm:flex hidden"> {links.dashboard.Name}</h4>
                { dashboard  ?   <span className=" absolute w-[5px] h-4 rounded-l  bg-[#FFC01E] right-0 "></span> : ''}
             </li> 
@@ -158,20 +158,20 @@ const links = {
 
             {/* transactions */}
             <li id="handlerTrans"  onClick={handlerTrans} className={`${ transactions ?'bg-selectedColor/10 cursor-pointer text-selectedColor w-full sm:w-[10rem] mt-2 py-3 pl-4 hover: text-[12px]  text-left relative flex items-center' : 'cursor-pointer w-[10rem] mt-2 py-3 pl-4 hover: text-[12px]  text-left relative flex items-center'}`}>
-                <Image className="selectedColor " src={links.transactions.icon} width={'15'} height={'15'} alt={''} />
+                <Image className="selectedColor " src={links.transactions.icon} width={'18'} height={'18'} alt={''} />
                 <h4 className="ml-2 sm:flex hidden"> {links.transactions.Name}</h4>
                 { transactions ?   <span className=" absolute w-[5px] h-4 rounded-l  bg-[#FFC01E] right-0 "></span> : ''}
             </li>
 
              {/* walet */}
             <li id="handlerWalet"  onClick={handlerWalet} className={`${ walet ?'bg-selectedColor/10 cursor-pointer text-selectedColor w-full sm:w-[10rem] mt-2 py-3 pl-4 hover: text-[12px]  text-left relative flex items-center' : 'cursor-pointer w-[10rem] mt-2 py-3 pl-4 hover: text-[12px]  text-left relative flex items-center'}`}>
-                <Image className="selectedColor " src={links.walet.icon} width={'15'} height={'15'} alt={''} />
+                <Image className="selectedColor " src={links.walet.icon} width={'18'} height={'18'} alt={''} />
                 <h4 className="ml-2 sm:flex hidden"> {links.walet.Name}</h4>
                 { walet ?   <span className=" absolute w-[5px] h-4 rounded-l bg-[#FFC01E] right-0 "></span> : ''}
             </li>
 
             <li id="Analytics"  onClick={handlerAnalytics} className={`${ analytic ?'bg-selectedColor/10 cursor-pointer text-selectedColor w-full sm:w-[10rem] mt-2 py-3 pl-4 hover: text-[12px]  text-left relative flex items-center' : 'cursor-pointer w-[10rem] mt-2 py-3 pl-4 hover: text-[12px]  text-left relative flex items-center'}`}>
-                <Image className="selectedColor " src={links.analytic.icon} width={'15'} height={'15'} alt={''} />
+                <Image className="selectedColor " src={links.analytic.icon} width={'18'} height={'18'} alt={''} />
                 <h4 className="ml-2 sm:flex hidden"> {links.analytic.Name}</h4>
                 { analytic ?   <span className=" absolute w-[5px] h-4 rounded-l bg-[#FFC01E] right-0 "></span> : ''}
             </li>
@@ -181,12 +181,12 @@ const links = {
                 { personal ?   <span className=" absolute w-[5px] h-4 rounded-l bg-[#FFC01E] right-0 "></span> : ''}
             </li>
             <li id="message"  onClick={handlerMessage} className={`${ message ?'bg-selectedColor/10 cursor-pointer text-selectedColor w-full sm:w-[10rem] mt-2 py-3 pl-4 hover: text-[12px]  text-left relative flex items-center' : 'cursor-pointer w-[10rem] mt-2 py-3 pl-4 hover: text-[12px]  text-left relative flex items-center'}`}>
-                <Image className="selectedColor " src={links.message.icon} width={'15'} height={'15'} alt={''} />
+                <Image className="selectedColor " src={links.message.icon} width={'18'} height={'18'} alt={''} />
                 <h4 className="ml-2 sm:flex hidden"> {links.message.Name}</h4>
                 { message ?   <span className=" absolute w-[5px] h-4 rounded-l bg-[#FFC01E] right-0 "></span> : ''}
             </li>
             <li id="setting"  onClick={handlerSetting} className={`${ setting ?'bg-selectedColor/10 cursor-pointer text-selectedColor w-full sm:w-[10rem] mt-2 py-3 pl-4 hover: text-[12px]  text-left relative flex items-center' : 'cursor-pointer w-[10rem] mt-2 py-3 pl-4 hover: text-[12px]  text-left relative flex items-center'}`}>
-                <Image className="selectedColor " src={links.setting.icon} width={'15'} height={'15'} alt={''} />
+                <Image className="selectedColor " src={links.setting.icon} width={'18'} height={'18'} alt={''} />
                 <h4 className="ml-2 sm:flex hidden"> {links.setting.Name}</h4>
                 { setting ?   <span className=" absolute w-[5px] h-4 rounded-l bg-[#FFC01E] right-0 "></span> : ''}
             </li>
