@@ -13,7 +13,7 @@ import Coloumns from 'Components/Coloumns';
 const Dashboard = () => {
 
     // import data 
-    const { MoneyStateData , payment , avatars } = useContext(AppContext);
+    const { MoneyStateData , payment , images } = useContext(AppContext);
     // const { payment } = useContext(AppContext);
 
 
@@ -119,8 +119,8 @@ const Dashboard = () => {
                             <button className=' text-xs py rounded-lg flex justify-start items-center text-selectedColor transition-all hover:text-selectedColor/75 '>see  all</button>
                         </div>
                         <article className=' overflow-hidden relative rounded-lg text-[#fff]   w-[17rem]  mt-2  '>
-                           {avatars.map((e) => {
-                            return( <MoneyTransaction key={e.id} sendId={e.id} sendName={e.name} sendTypeTransaction={e.typeTransaction} sendValue={e.value} sendAvatar={e.avatar} /> )
+                           {images.map((e) => {
+                            return( <MoneyTransaction key={e.id} sendId={e.id} sendName={e.name} sendTypeTransaction={e.typeTransaction} sendValue={e.value} sendImage={e.image} /> )
                            })}        
                         </article>
                     </div>

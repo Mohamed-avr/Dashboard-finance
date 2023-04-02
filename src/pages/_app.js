@@ -83,41 +83,41 @@ export default function App({ Component, pageProps }) {
     },
   ]
 
-  const avatars = [
+  const images = [
     {
       "name": "Matheus Ferrero",
       "typeTransaction": "received" ,
       "id": 1,
       "value": "+$54.08",
-      "avatar": "/photo1.png"
+      "image": "/photoOne.png"
     }
     ,  {
       "name": "Floyd Miles",
       " typeTransaction": "send",
       "id": 2,
       "value": "-$39.65",
-      "avatar": "/photo2.png"
+      "image": "/photoTwo.png"
     }
     ,  {
       "name": "Jerome Bell",
       " typeTransaction": "send" ,
       "id": 3,
       "value": "-$29.78",
-      "avatar": "/photo3.png"
+      "image": "/photoThree.png"
     }
     ,  {
       "name": "Ralph Edwards",
       " typeTransaction": "send" ,
       "id": 4,
       "value": "-$46.61",
-      "avatar":"/photo4.png"
+      "image":"/photoFour.png"
     }
   ]
 
   return (
     <AppContext.Provider value={
       {
-        MoneyStateData , avatars
+        MoneyStateData , images
         , dashboard, setDashboard
         , transactions, setTransactions
         , walet, setWalet
