@@ -1,9 +1,9 @@
-import React from 'react';
+import Empty from "./Empty";
 
 const Message = () => {
     return (
-        <div className=' h-screen bg-body text-3xl'>
-            Message you can here me here
+        <div>
+             <Empty sendPageName='Message' />
         </div>
     );
 }

@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 
+
 const Payment = (props) => {
     return (
         <div className="flex  justify-center items-center flex-row mt-4  ">

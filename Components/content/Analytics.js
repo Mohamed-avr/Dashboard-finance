@@ -1,9 +1,12 @@
-import React from 'react';
 
-const Analytics = () => {
+import Empty from './Empty';
+
+const Analytics = () => {   
+    
+
     return (
         <div>
-            Analytics
+           <Empty sendPageName='Analytics' />
         </div>
     );
 }

@@ -2,7 +2,7 @@ import MoneyState from 'Components/MoneyState';
 import { useContext } from 'react';
 import AppContext from 'Components/AppContext';
 import Payment from './Payment';
-import ChartElement from 'public/chartElement';
+
 import Chart from 'Components/Chart';
 import Image from 'next/image';
 import MoneyTransaction from 'Components/MoneyTransaction';

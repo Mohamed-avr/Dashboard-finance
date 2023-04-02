@@ -1,8 +1,9 @@
+import Empty from "./Empty";
 
 const Transactions = () => {
     return (
         <div>
-            transactions
+        <Empty sendPageName='Transactions' />
         </div>
     );
 }

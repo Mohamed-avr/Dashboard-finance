@@ -7,10 +7,7 @@ import css from 'styled-jsx/css';
 
 
 const AsideBar = () => {
-  const { dashboard ,setDashboard , transactions , setTransactions , walet , setWalet , analytic , setAnalytic , personal , setPersonal , message , setMessage , setting , setSetting} = useContext(AppContext);
-
-
-
+  const { dashboard ,setDashboard , transactions , setTransactions , walet , setWalet , analytic , setAnalytic , personal , setPersonal , message , setMessage , setting , setSetting } = useContext(AppContext);
 
   const handlerDash = (e) => {
 
@@ -85,6 +82,7 @@ const handlerPersonal = (e) => {
    setSetting(false);
 
 }
+
  
 const handlerMessage = (e) => {
   console.log(dashboard  , transactions , walet , analytic , personal , message ,setting )

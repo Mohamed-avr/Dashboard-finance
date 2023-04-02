@@ -1,9 +1,10 @@
-import React from 'react';
+import Empty from "./Empty";
+
 
 const Setting = () => {
     return (
         <div>
-            Setting
+           <Empty sendPageName='setting' />
         </div>
     );
 }

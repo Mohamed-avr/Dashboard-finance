@@ -1,9 +1,9 @@
-import React from 'react';
+import Empty from "./Empty";
 
 const Personal = () => {
     return (
         <div>
-            Personal
+             <Empty sendPageName='Personal' />
         </div>
     );
 }
